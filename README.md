@@ -9,3 +9,4 @@
 
 - 6.3: anekdootit, step1 ✅
 - 6.4: anekdootit, step2 ✅
+- 6.5: anekdootit, step2 ✅
