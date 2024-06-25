@@ -12,3 +12,4 @@
 - 6.5: anekdootit, step3 ✅
 - 6.6: anekdootit, step4 ✅
 - 6.7: anekdootit, step5 ✅
+- 6.8: anekdootit, step6 ✅
