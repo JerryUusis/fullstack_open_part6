@@ -22,18 +22,28 @@ const initialState = anecdotesAtStart.map(asObject);
 const reducer = (state = initialState, action) => {
   console.log("state now: ", state);
   console.log("action", action);
-  if (action.type === "ADD_VOTE") {
-    const anecdoteToChange = state.find((a) => a.id === action.payload.id);
-    const changedAnecdote = {
-      ...anecdoteToChange,
-      votes: anecdoteToChange.votes + 1,
-    };
-    // Map through the anecdotes array and if id is same as action.payload.id, then replace it with changed anecdote
-    return state.map((anecdote) =>
-      anecdote.id === action.payload.id ? changedAnecdote : anecdote
-    );
+
+  switch (action.type) {
+    case "ADD_VOTE": {
+      const anecdoteToChange = state.find((a) => a.id === action.payload.id);
+      const changedAnecdote = {
+        ...anecdoteToChange,
+        votes: anecdoteToChange.votes + 1,
+      };
+      // Map through the anecdotes array and if id is same as action.payload.id, then replace it with changed anecdote
+      return state.map((anecdote) =>
+        anecdote.id === action.payload.id ? changedAnecdote : anecdote
+      );
+    }
+
+    case "NEW_ANECDOTE": {
+      const newAnecdote = asObject(action.payload.content);
+      console.log(newAnecdote);
+      return [...state, newAnecdote];
+    }
+    default:
+      return state;
   }
-  return state;
 };
 
 export const addVote = (id) => {
@@ -41,6 +51,15 @@ export const addVote = (id) => {
     type: "ADD_VOTE",
     payload: {
       id,
+    },
+  };
+};
+
+export const newAnecdote = (content) => {
+  return {
+    type: "NEW_ANECDOTE",
+    payload: {
+      content,
     },
   };
 };
