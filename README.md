@@ -13,3 +13,8 @@
 - 6.6: anekdootit, step4 ✅
 - 6.7: anekdootit, step5 ✅
 - 6.8: anekdootit, step6 ✅
+
+
+## [Exercise 6.9](https://fullstackopen.com/osa6/monta_reduseria#tehtava-6-9)
+
+- 6.9 paremmat anekdootit, step7 ✅
