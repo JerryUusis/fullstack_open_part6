@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addVote } from "../reducers/anecdotesSlice";
+import { setVoteNotificationMessage } from "../reducers/notificationSlice";
 
 const AnecdoteList = () => {
   const filterState = useSelector((state) => state.filter);
@@ -12,6 +13,8 @@ const AnecdoteList = () => {
 
   const vote = (id) => {
     dispatch(addVote(id));
+    const anecdote = anecdotes.find((anecdote) => anecdote.id === id);
+    dispatch(setVoteNotificationMessage(anecdote.content));
   };
 
   return (

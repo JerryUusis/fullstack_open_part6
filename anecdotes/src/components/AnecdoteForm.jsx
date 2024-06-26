@@ -1,11 +1,13 @@
 import { useDispatch } from "react-redux";
 import { newAnecdote } from "../reducers/anecdotesSlice";
+import { setNotifyNewAnecdote } from "../reducers/notificationSlice";
 
 const AnecdoteForm = () => {
   const dispatch = useDispatch();
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(newAnecdote(event.target.anecdoteInput.value));
+    dispatch(setNotifyNewAnecdote(event.target.anecdoteInput.value));
     event.target.anecdoteInput.value = "";
   };
   return (
