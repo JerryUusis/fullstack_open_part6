@@ -22,3 +22,4 @@
 ## [Exercises 6.10-6.13](https://fullstackopen.com/osa6/monta_reduseria#tehtavat-6-10-6-13)
 
 - 6.10 anekdootit, step8 ✅
+- 6.11 anekdootit, step9 ✅
