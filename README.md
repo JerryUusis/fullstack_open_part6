@@ -23,3 +23,4 @@
 
 - 6.10 anekdootit, step8 ✅
 - 6.11 anekdootit, step9 ✅
+- 6.12 anekdootit, step10 ✅
