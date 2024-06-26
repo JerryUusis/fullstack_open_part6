@@ -18,3 +18,7 @@
 ## [Exercise 6.9](https://fullstackopen.com/osa6/monta_reduseria#tehtava-6-9)
 
 - 6.9 paremmat anekdootit, step7 ✅
+
+## [Exercises 6.10-6.13](https://fullstackopen.com/osa6/monta_reduseria#tehtavat-6-10-6-13)
+
+- 6.10 anekdootit, step8 ✅
