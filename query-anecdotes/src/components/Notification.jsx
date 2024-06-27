@@ -1,18 +1,30 @@
-const Notification = () => {
+import { useEffect } from "react";
+import {
+  useNotificationMessage,
+  useNotificationDispatch,
+} from "./NotificationContext";
+
+const Notification = ({ type }) => {
+  const message = useNotificationMessage();
+  const dispatch = useNotificationDispatch();
+  useEffect(() => {
+    if (message) {
+      setTimeout(() => {
+        dispatch({ type });
+      }, 5000);
+    }
+  }, [dispatch, message]);
+
   const style = {
-    border: 'solid',
+    border: "solid",
     padding: 10,
     borderWidth: 1,
-    marginBottom: 5
-  }
-  
-  if (true) return null
+    marginBottom: 5,
+  };
 
-  return (
-    <div style={style}>
-      
-    </div>
-  )
-}
+  if (!message) return null;
 
-export default Notification
+  return <div style={style}>{message}</div>;
+};
+
+export default Notification;
