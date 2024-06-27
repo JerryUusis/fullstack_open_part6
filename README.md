@@ -30,3 +30,7 @@
 
 - 6.14 anekdootit ja backend, step1 ✅
 - 6.15 anekdootit ja backend, step2 ✅
+
+## [Exercises 6.16.-6.19](https://fullstackopen.com/osa6/redux_sovelluksen_kommunikointi_palvelimen_kanssa#tehtavat-6-16-6-19)
+
+- 6.16 anekdootit ja backend, step3 ✅
