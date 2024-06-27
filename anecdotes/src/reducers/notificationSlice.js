@@ -7,12 +7,8 @@ const notificationSlice = createSlice({
     isVisible: false,
   },
   reducers: {
-    setVoteNotificationMessage: (state, action) => {
-      state.message = `you voted '${action.payload}'`;
-      state.isVisible = true;
-    },
-    setNotifyNewAnecdote: (state, action) => {
-      state.message = `new anecdote created: '${action.payload}'`;
+    setMessage: (state, action) => {
+      state.message = action.payload;
       state.isVisible = true;
     },
     setIsVisible: (state, action) => {
@@ -21,9 +17,19 @@ const notificationSlice = createSlice({
   },
 });
 
+export const setNotification = (message, timeOut) => {
+  return (dispatch) => {
+    dispatch(setMessage(message));
+    setTimeout(() => {
+      dispatch(setIsVisible(false));
+    }, timeOut * 1000);
+  };
+};
+
 export default notificationSlice.reducer;
 export const {
   setVoteNotificationMessage,
   setNotifyNewAnecdote,
   setIsVisible,
+  setMessage,
 } = notificationSlice.actions;

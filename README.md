@@ -36,3 +36,4 @@
 - 6.16 anekdootit ja backend, step3 ✅
 - 6.17 anekdootit ja backend, step4 ✅
 - 6.18 anekdootit ja backend, step5 ✅
+- 6.19 anekdootit ja backend, step5 ✅

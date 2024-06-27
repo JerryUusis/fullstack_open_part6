@@ -1,18 +1,8 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setIsVisible } from "../reducers/notificationSlice";
+import { useSelector } from "react-redux";
 
 const Notification = () => {
-  const dispatch = useDispatch();
   const notification = useSelector((state) => state.notification.message);
   const isVisible = useSelector((state) => state.notification.isVisible);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch(setIsVisible(false));
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [isVisible, dispatch]);
 
   const style = {
     border: "solid",
