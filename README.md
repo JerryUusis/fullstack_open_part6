@@ -41,3 +41,4 @@
 ## [Exercises 6.20.-6.22.](https://fullstackopen.com/osa6/react_query_use_reducer_ja_context#tehtavat-6-20-6-22)
 
 - Tehtävä 6.20 ✅
+- Tehtävä 6.21 ✅
