@@ -43,7 +43,7 @@
 - Tehtävä 6.21 ✅
 - Tehtävä 6.22 ✅
 
-## [Exercises 6.22-6.23](https://fullstackopen.com/osa6/react_query_use_reducer_ja_context#tehtavat-6-23-6-24);
+## [Exercises 6.22-6.23](https://fullstackopen.com/osa6/react_query_use_reducer_ja_context#tehtavat-6-23-6-24)
 
 - Tehtävä 6.23 ✅
 - Tehtävä 6.24 ✅
