@@ -17,7 +17,7 @@ const App = () => {
   const handleVote = (anecdote, type) => {
     const updatedAnecdote = { ...anecdote, votes: anecdote.votes + 1 };
     updateAnecdoteMutation.mutate(updatedAnecdote);
-    dispatch({ type, payload: anecdote.content });
+    dispatch({ type, payload: `You voted '${anecdote.content}'` });
   };
 
   const result = useQuery({
@@ -37,14 +37,14 @@ const App = () => {
       <h3>Anecdote app</h3>
 
       <Notification type="CLEAR" />
-      <AnecdoteForm type="ADD" />
+      <AnecdoteForm type="MESSAGE" />
 
       {anecdotes.map((anecdote) => (
         <div key={anecdote.id}>
           <div>{anecdote.content}</div>
           <div>
             has {anecdote.votes}
-            <button onClick={() => handleVote(anecdote, "VOTE")}>vote</button>
+            <button onClick={() => handleVote(anecdote, "MESSAGE")}>vote</button>
           </div>
         </div>
       ))}
